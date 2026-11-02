@@ -1,0 +1,70 @@
+.hero-art {
+  min-height: 170px;
+  margin-top: 10px;
+}
+
+.car-shape {
+  right: 42px;
+  bottom: 42px;
+  width: 250px;
+  height: 130px;
+  color: transparent;
+  font-size: 0;
+  filter: drop-shadow(0 18px 12px rgba(7, 53, 41, 0.5));
+  transform: none;
+}
+
+.car-body {
+  position: absolute;
+  left: 0;
+  bottom: 22px;
+  width: 250px;
+  height: 58px;
+  background: #b9e9d4;
+  border-radius: 18px 34px 13px 13px;
+}
+
+.car-roof {
+  position: absolute;
+  left: 52px;
+  bottom: 72px;
+  width: 142px;
+  height: 52px;
+  background: #d1f5e7;
+  clip-path: polygon(18% 100%, 32% 0, 76% 0, 100% 100%);
+}
+
+.car-roof::after {
+  content: '';
+  position: absolute;
+  inset: 8px 17px 6px 25px;
+  background: #2e806c;
+  clip-path: polygon(15% 100%, 29% 0, 76% 0, 100% 100%);
+  opacity: 0.72;
+}
+
+.car-wheel {
+  position: absolute;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+  border: 8px solid #d7f5ea;
+  border-radius: 50%;
+  background: #073f34;
+}
+
+.car-wheel-left {
+  left: 37px;
+}
+
+.car-wheel-right {
+  right: 37px;
+}
+
+@media (max-width: 950px) {
+  .car-shape {
+    right: 20px;
+    transform: scale(0.84);
+    transform-origin: bottom right;
+  }
+}

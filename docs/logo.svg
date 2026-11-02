@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="90" viewBox="0 0 300 90" role="img" aria-label="AlugaMais">
+  <rect x="4" y="9" width="70" height="70" rx="18" fill="#15745e"/>
+  <path d="M22 59 38 27h9l16 32h-9l-4-9H35l-4 9zm16-16h9l-4-10z" fill="#fff"/>
+  <text x="91" y="51" fill="#183b36" font-family="Arial,sans-serif" font-size="29" font-weight="700">AlugaMais</text>
+  <text x="92" y="68" fill="#638a7e" font-family="Arial,sans-serif" font-size="11" letter-spacing="2">ALUGUEL DE CARROS</text>
+</svg>

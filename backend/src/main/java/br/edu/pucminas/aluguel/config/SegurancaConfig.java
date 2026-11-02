@@ -27,6 +27,11 @@ public class SegurancaConfig {
                 .sessionManagement(s -> s.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(a -> a.requestMatchers(HttpMethod.POST, "/api/auth/cadastro").permitAll()
                         .anyRequest().authenticated())
-                .httpBasic(b -> {}).build();
+                .httpBasic(b -> b.authenticationEntryPoint((request, response, error) -> {
+                    response.setStatus(401);
+                    response.setCharacterEncoding("UTF-8");
+                    response.setContentType("application/json");
+                    response.getWriter().write("{\"message\":\"Usuário ou senha inválidos\"}");
+                })).build();
     }
 }

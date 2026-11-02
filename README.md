@@ -46,7 +46,7 @@ O AlugaMais centraliza pedidos de aluguel de automóveis. Clientes autenticados 
 
 ## Arquitetura e modelos
 
-O frontend consome a API REST MVC. O `controller` recebe e valida dados; o `service` aplica permissões e transições; o `repository` executa SQL parametrizado no PostgreSQL. O esquema é criado por [`schema.sql`](backend/src/main/resources/schema.sql) no início da aplicação.
+O frontend consome a API REST MVC. O `controller` recebe e valida dados; o `service` aplica permissões e transições; o `repository` executa SQL parametrizado no PostgreSQL. O esquema privado `app` e suas tabelas são criados por [`schema.sql`](backend/src/main/resources/schema.sql) no início da aplicação.
 
 As versões dos modelos estão preservadas:
 
@@ -86,7 +86,7 @@ As senhas dos agentes devem ter no mínimo oito caracteres. O seed não altera a
 docker compose up -d
 ```
 
-O `compose.yaml` usa credenciais de desenvolvimento. Para Supabase, crie o projeto na sua conta, obtenha os parâmetros de conexão em **Project Settings → Database**, configure `DATABASE_URL`, `DATABASE_USER` e `DATABASE_PASSWORD` e inicie o backend. O arquivo `schema.sql` criará as tabelas na primeira inicialização. O banco Supabase real não está provisionado neste repositório.
+O `compose.yaml` usa credenciais de desenvolvimento. Para Supabase, crie o projeto na sua conta, abra **Connect → Session pooler → JDBC**, copie host, porta e usuário, configure `DATABASE_URL`, `DATABASE_USER` e `DATABASE_PASSWORD` e inicie o backend. O arquivo `schema.sql` criará o esquema `app` e as tabelas na primeira inicialização. O banco Supabase real não está provisionado neste repositório.
 
 ### Backend
 

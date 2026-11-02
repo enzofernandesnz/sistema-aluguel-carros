@@ -6,7 +6,7 @@ Protótipo web para cadastro de clientes, automóveis e pedidos de aluguel, com 
 
 ## Status do projeto
 
-Protótipo funcional preparado para execução local ou com Supabase PostgreSQL. A publicação e a configuração de um projeto Supabase dependem das credenciais do responsável. O backend requer JDK 25 e o frontend, Node.js com npm.
+Protótipo publicado em [enzofernandesnz/sistema-aluguel-carros](https://github.com/enzofernandesnz/sistema-aluguel-carros), preparado para execução local ou com Supabase PostgreSQL. A conexão com um projeto Supabase depende das credenciais do responsável. O backend requer JDK 25 e o frontend, Node.js com npm.
 
 ## Índice
 
@@ -122,7 +122,7 @@ cd frontend && npm run build
 cd ../backend && mvn test
 ```
 
-Para uma verificação manual da API, confira os exemplos em [docs/api.md](docs/api.md). As regras relevantes são CPF e email únicos, datas válidas, acesso do cliente apenas aos próprios pedidos, parecer obrigatório para decisão financeira e transições válidas do status.
+O backend inclui três testes de serviço para isolamento de pedidos por cliente, parecer financeiro obrigatório e transição para contrato somente após aprovação. Para uma verificação manual da API, confira os exemplos em [docs/api.md](docs/api.md). As regras adicionais são CPF e email únicos e datas válidas. O fluxo completo com banco Supabase ainda requer um projeto e credenciais configurados.
 
 ## Documentação
 
